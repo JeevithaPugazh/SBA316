@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Student Management</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div>
+        <h1>Student Details</h1>
+        <p>Please provide student information</p>
+      </div>
+      <form id="studentDetails">
+        <label for="studentName">Student Name:</label>
+        <input
+          name="studentName"
+          type="text"
+          placeholder="Enter student's full name"
+          pattern="^[A-Z][a-zA-Z]*\s[A-Z][a-zA-Z]*$"
+          required
+        />
+
+        <br />
+        <label for="courseName">Course Name:</label>
+        <input
+          name="courseName"
+          type="text"
+          placeholder="Enter student's course name"
+          required
+        />
+
+        <br />
+        <label for="email">Enter Email:</label>
+        <input
+          name="email"
+          type="email"
+          placeholder="Enter email I'd"
+          pattern="^(?!.*@example\.com$)[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-z]{2,}$"
+        />
+        <br />
+        <label for="graduationDate"
+          >Enter graduation date:</label
+        >
+        <input name="date" type="date" />
+        <br />
+
+        <div id="submit">
+          <input type="submit" value="ADD" />
+        </div>
+      </form>
+      <div id="error"></div>
+    </div>
+    <div class="table-container">
+      <div>
+        <h1>Students list</h1>
+        <p>
+          Click here to add studenets:
+          <button className="btn" id="addBtn">Add</button>
+        </p>
+      </div>
+      <table>
+        <tbody id="tbody">
+          <tr>
+            <th>Student Name</th>
+            <th>Course Name</th>
+            <th>Email id</th>
+            <th>Graduation date</th>
+            <th>operations</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/d8f052c6cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
